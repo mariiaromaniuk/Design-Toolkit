@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./App.scss";
 import { List, Map } from "immutable";
 import { HuePicker } from "react-color";
 
@@ -88,7 +89,8 @@ class App extends Component {
     if (this.state.selected && this.state.resizing !== []) {
       let index = parseInt(this.state.selected.id)
       let updatedRects = this.state.rects;
-      updatedRects[index].selected = true
+      updatedRects[index].selected = true;
+      
       if (this.state.resizing[0]) {
         updatedRects[index].startX = point.get('x')
       }
@@ -227,8 +229,8 @@ class App extends Component {
     }
 
     let updatedRects = this.state.rects;
-    for (let i in updatedRects){
-      if (updatedRects[i].selected){
+    for (let i in updatedRects) {
+      if (updatedRects[i].selected) {
         updatedRects[i].selected = false
       }
     }
