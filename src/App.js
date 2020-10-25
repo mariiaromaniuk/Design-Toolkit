@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import "./App.scss";
+// import styles from "./draw.module.scss";
 import { List, Map } from "immutable";
+// Collection of color pickers
 import { HuePicker } from "react-color";
 
 // preliminary code thanks to: https://codepen.io/philipp-spiess/pen/WpQpGr

@@ -1,0 +1,116 @@
+// Node-sass is a library that provides binding for Node.js to LibSass.
+// It allows you to natively compile .scss files to css via a connect middleware.
+
+html, * {
+    font-family: Avenir;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+.pageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 100%;
+  margin: 26px 26px 26px 26px;
+
+  .title {
+      text-align: center;
+      margin-bottom: 20px;
+  }
+
+  .drawArea {
+      display: flex;
+      width: 100%;
+      height: 90vh;
+      border: 1px solid #939393f7;
+      border-radius: 10px 0px 0px 10px;
+      float: left;
+      cursor: crosshair;
+      box-shadow: 0px 0px 5px 1px;
+      // prevent scrolling on mobile while drawing
+      touch-action: none;
+  }
+
+  .center {
+    width: 100%;
+    display: flex;
+  }
+
+  .effectContainerBox {
+      width: max-content;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      padding: 20px;
+      align-items: center;
+      border: 1px solid #939393f7;
+      cursor: pointer;
+      box-shadow: 0px 0px 5px 1px;
+      border-radius: 0px 10px 10px 0px;
+
+      .slidecontainer {
+          width: 100%;
+          display: flex;
+          justify-content: left;
+          flex-direction: column;
+      }
+  }
+
+  & .buttonBox {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      flex-direction: row;
+
+      .button {
+        background: lightgrey;
+        width: 50px;
+        height: 40px;
+        border-radius: 10%;
+      }
+
+      .buttonBig {
+        width: 150px;
+        height: 50px;
+        font-size: 20px;
+      }
+  }
+
+  .dragBox {
+    width: 8px;
+    height: 8px;
+    fill: white;
+    stroke: black;
+    z-index: 1001;
+    cursor: pointer;
+
+        &:hover {
+            fill: blue;
+        }
+    }
+
+  rect {
+    z-index: 999;
+    cursor: move;
+    display: flex;
+  }
+
+  .rectangleText {
+    touch-action: none;
+    pointer-events: none;
+    text-anchor: middle;
+    fill: black;
+    user-select: none;
+  }
+  
+  .drawing {
+      width: 100%;
+      height: 100%;
+  }
+}
