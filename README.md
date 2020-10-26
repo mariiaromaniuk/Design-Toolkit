@@ -9,14 +9,10 @@ Only when a shape is selected in Grab Mode it can be deleted by clicking the “
 
 Undo, Redo, Clear: this app allows the user to undo and redo the creation of shapes. The undo/redo buttons can only remove and put back elements into the left pane. Reverting a change in color, size, line thickness, etc. is not possible at this moment. Note that the “delete” button cannot be undone. 
 
-## “Keep Track”
-Javascript, with React JS was used for this. I used node-sass to make my project SCSS compatible. I used an Immutable.JS library to have more robust, persistent, immutable data structures. I used “react-color,” an installable npm-package, to auto-generate color sliders for me.
-I used the latest version of every framework and npm package.
-I used the latest version of Visual Studio Code for editing. I used the chrome React Dev Tools add-on for state management and debugging.
+## Implementation
+This project was mplemented with Javascript and React. I used node-sass to make it SCSS compatible. I used an Immutable.JS library to have more robust, persistent, immutable data structures. I used “react-color,” an npm-package, to auto-generate color sliders for me. I also used the chrome React Dev Tools add-on for state management and debugging. I used one main reference for how to use the SVG "path" object to draw lines on a page. I listed this at the top of the file. From there, I extrapolated the information in the sample code to work for SVG "rect” object, which I learned the basic syntax for by visiting the W3 website.
 
-I used one main reference for how to use the SVG "path" object to draw lines on a page. I listed this at the top of the file. From there, I extrapolated the information in the sample code to work for SVG "rect” object, which I learned the basic syntax for by visiting the W3 website.
-
-## Discussion
+## Future Enhancement
 This was a great exercise in empathizing with the toolmakers of some of my favorite platforms, like Figma, Sketch, and others. I realize now how much planning it takes to create tools that can generate shapes of any size, have the shapes be aware of each other and behave in smart ways, and do this all with a great user experience. 
 
 In the future, I would like to create a more generic way to create shapes, put bounding boxes around them, and create ways to resize and edit them. The methods I've used in this project are fairly limited to just modifying rectangles. I'd love to explore how to make this more generalizable for all kinds of shapes. I'd also like to explore how to manage shape hierarchies, to truly make this tool more useful than just drawing single layer shapes of any size and color. The ability to nest objects within each other, modify the indexes, and make meaningful objects, would make this tool much more useful. 
