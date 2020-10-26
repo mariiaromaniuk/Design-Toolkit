@@ -1,68 +1,22 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## User Manual
+Installing the application: Download the zip file, open the project in an editor, and run “npm install” to download and install all of the necessary packages. To run the web-app locally, simply run “npm start” in your terminal. 
 
-## Available Scripts
+Draw Mode: when the “Draw” button is pressed (the app is already defaulted to Draw Mode), users can draw rectangles of any shape and size, within the left pane. The mouse needs to be held down between the start and end points. Zero width and zero height boxes are not allowed.
 
-In the project directory, you can run:
+Grab Mode: when the “Grab” button is pressed, users will not be able to draw any shapes. Instead, by clicking on a shape, users can move it around, within the left pain. By clicking and dragging on one of the 8 selection handles that appear on a highlighted element, users can resize a shape in the direction of the handle. To deselect and element, click on the canvas.
+When in Grab Mode, users can also change the fill and stroke color, as well as the stroke thickness and corner radius (“roundness”) of the selected rectangle. Note - clicking on a rectangle will change the slider values to reflect the values of the selected shape.
+Only when a shape is selected in Grab Mode it can be deleted by clicking the “delete” button that appears in the right pane, and deleting the shape. 
 
-### `yarn start`
+Undo, Redo, Clear: this app allows the user to undo and redo the creation of shapes. The undo/redo buttons can only remove and put back elements into the left pane. Reverting a change in color, size, line thickness, etc. is not possible at this moment. Note that the “delete” button cannot be undone. 
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## “Keep Track”
+Javascript, with React JS was used for this. I used node-sass to make my project SCSS compatible. I used an Immutable.JS library to have more robust, persistent, immutable data structures. I used “react-color,” an installable npm-package, to auto-generate color sliders for me.
+I used the latest version of every framework and npm package.
+I used the latest version of Visual Studio Code for editing. I used the chrome React Dev Tools add-on for state management and debugging.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+I used one main reference for how to use the SVG "path" object to draw lines on a page. I listed this at the top of the file. From there, I extrapolated the information in the sample code to work for SVG "rect” object, which I learned the basic syntax for by visiting the W3 website.
 
-### `yarn test`
+## Discussion
+This was a great exercise in empathizing with the toolmakers of some of my favorite platforms, like Figma, Sketch, and others. I realize now how much planning it takes to create tools that can generate shapes of any size, have the shapes be aware of each other and behave in smart ways, and do this all with a great user experience. 
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+In the future, I would like to create a more generic way to create shapes, put bounding boxes around them, and create ways to resize and edit them. The methods I've used in this project are fairly limited to just modifying rectangles. I'd love to explore how to make this more generalizable for all kinds of shapes. I'd also like to explore how to manage shape hierarchies, to truly make this tool more useful than just drawing single layer shapes of any size and color. The ability to nest objects within each other, modify the indexes, and make meaningful objects, would make this tool much more useful. 
