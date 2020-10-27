@@ -1,13 +1,13 @@
 ## User Manual
 Installing the application: Download the zip file, open the project in an editor, and run “npm install” to download and install all of the necessary packages. To run the web-app locally, simply run “npm start” in your terminal. 
 
-__Draw Mode__: when the “Draw” button is pressed (the app is already defaulted to Draw Mode), users can draw rectangles of any shape and size, within the left pane. The mouse needs to be held down between the start and end points. Zero width and zero height boxes are not allowed.
+_**Draw Mode**_: when the “Draw” button is pressed (the app is already defaulted to Draw Mode), users can draw rectangles of any shape and size, within the left pane. The mouse needs to be held down between the start and end points. Zero width and zero height boxes are not allowed.
 
-__Grab Mode__: when the “Grab” button is pressed, users will not be able to draw any shapes. Instead, by clicking on a shape, users can move it around, within the left pain. By clicking and dragging on one of the 8 selection handles that appear on a highlighted element, users can resize a shape in the direction of the handle. To deselect and element, click on the canvas.
+_**Grab Mode**_: when the “Grab” button is pressed, users will not be able to draw any shapes. Instead, by clicking on a shape, users can move it around, within the left pain. By clicking and dragging on one of the 8 selection handles that appear on a highlighted element, users can resize a shape in the direction of the handle. To deselect and element, click on the canvas.
 When in Grab Mode, users can also change the fill and stroke color, as well as the stroke thickness and corner radius (“roundness”) of the selected rectangle. Note - clicking on a rectangle will change the slider values to reflect the values of the selected shape.
 Only when a shape is selected in Grab Mode it can be deleted by clicking the “delete” button that appears in the right pane, and deleting the shape. 
 
-__Undo, Redo, Clear__: this app allows the user to undo and redo the creation of shapes. The undo/redo buttons can only remove and put back elements into the left pane. Reverting a change in color, size, line thickness, etc. is not possible at this moment. Note that the “delete” button cannot be undone. 
+_**Undo, Redo, Clear**_: this app allows the user to undo and redo the creation of shapes. The undo/redo buttons can only remove and put back elements into the left pane. Reverting a change in color, size, line thickness, etc. is not possible at this moment. Note that the “delete” button cannot be undone. 
 
 ## Implementation
 This project was mplemented with Javascript and React. I used node-sass to make it SCSS compatible. I used an Immutable.JS library to have more robust, persistent, immutable data structures. I used “react-color,” an npm-package, to auto-generate color sliders for me. I also used the chrome React Dev Tools add-on for state management and debugging. I used one main reference for how to use the SVG "path" object to draw lines on a page. I listed this at the top of the file. From there, I extrapolated the information in the sample code to work for SVG "rect” object, which I learned the basic syntax for by visiting the W3 website.
